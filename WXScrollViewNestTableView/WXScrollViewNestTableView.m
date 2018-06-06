@@ -46,6 +46,7 @@ const static int tagSubTableView = 1000;
         tableView.tag = tagSubTableView + i;
         [self.mainScrollView addSubview:tableView];
         tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.headerViewHeight)];
+        tableView.scrollIndicatorInsets = UIEdgeInsetsMake(self.headerViewHeight, 0, 0, 0);
     }
     
     self.topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.headerViewHeight)];
